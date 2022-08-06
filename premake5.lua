@@ -11,7 +11,8 @@ end
 project "bimg"
 	kind "StaticLib"
 	language "C++"
-	cppdialect "C++14"
+	cppdialect "C++17"
+	staticruntime "on"
 	exceptionhandling "Off"
 	rtti "Off"
 	files
