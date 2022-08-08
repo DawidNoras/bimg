@@ -30,10 +30,22 @@ project "bimg"
 		"3rdparty/astc-codec",
 		"3rdparty/astc-codec/include"
 	}
-	filter "configurations:Release"
-		defines "BX_CONFIG_DEBUG=0"
+
 	filter "configurations:Debug"
 		defines "BX_CONFIG_DEBUG=1"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		defines "BX_CONFIG_DEBUG=0"
+		runtime "Release"
+		optimize "on"
+
+	filter "configurations:Dist"
+		defines "BX_CONFIG_DEBUG=0"
+		runtime "Release"
+		optimize "on"
+
 	filter "action:vs*"
 		defines "_CRT_SECURE_NO_WARNINGS"
 	setBxCompat()
