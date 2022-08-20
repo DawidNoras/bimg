@@ -5,3 +5,6 @@
 .svn
 tags
 .gdb_history
+bin/
+obj/
+*.vcxproj*
