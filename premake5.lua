@@ -15,6 +15,10 @@ project "bimg"
 	staticruntime "on"
 	exceptionhandling "Off"
 	rtti "Off"
+	_3rd_party_location_dir()
+	
+	set_output_dir()
+
 	files
 	{
 		"include/bimg/*.h",
