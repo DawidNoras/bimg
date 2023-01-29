@@ -24,15 +24,19 @@ project "bimg"
 		"include/bimg/*.h",
 		"src/image.cpp",
 		"src/image_gnf.cpp",
+		"src/image_decode.cpp",
 		"src/*.h",
-		"3rdparty/astc-codec/src/decoder/*.cc"
+		"3rdparty/astc-codec/src/decoder/*.cc",
+		"3rdparty/tinyexr/deps/miniz/miniz.c",
 	}
 	includedirs
 	{
 		"../bx/include",
 		"include",
 		"3rdparty/astc-codec",
-		"3rdparty/astc-codec/include"
+		"3rdparty/astc-codec/include",
+		"3rdparty",
+		"3rdparty/tinyexr/deps/miniz",
 	}
 
 	filter "configurations:Debug"
